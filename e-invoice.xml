@@ -3,6 +3,46 @@
 <?xml-stylesheet type="text/xsl" href="results.xsl"?>
 -->
 <Invoice>
+<AccountingSupplierParty>
+		<Party>
+			<Name>Safedrive Logistics</Name>
+			<PostalAddress>
+				<StreetName>Atatürk Caddesi</StreetName>
+				<CitySubdivisionName>Beşiktaş</CitySubdivisionName>
+				<CityName>İstanbul</CityName>
+				<Country>Turkey</Country>
+			</PostalAddress>
+			<TaxScheme>
+				<Name>İstanbul Tax Office</Name>
+			</TaxScheme>
+			<PartyIdentification>
+				<ID schemeID="BranchID">0120120125</ID>
+			</PartyIdentification>
+			<PartyIdentification>
+				<ID schemeID="TaxID">1110002225</ID>
+			</PartyIdentification>
+		</Party>
+	</AccountingSupplierParty>
+	<AccountingCustomerParty>
+		<Party>
+			<Name>Vernon Dursley</Name>
+			<PostalAddress>
+				<StreetName>4 Private Drive</StreetName>
+				<CitySubdivisionName>Little Whinging</CitySubdivisionName>
+				<CityName>Surrey</CityName>
+				<Country>England</Country>
+			</PostalAddress>
+			<TaxScheme>
+				<Name>Surrey Tax Office</Name>
+			</TaxScheme>
+			<PartyIdentification>
+				<ID schemeID="TaxID">8889997775</ID>
+			</PartyIdentification>
+			<PartyIdentification>
+				<ID schemeID="BranchID">9879879875</ID>
+			</PartyIdentification>
+		</Party>
+	</AccountingCustomerParty>
 	<InvoiceLine>
 		<ItemNumber>1</ItemNumber>
 		<Product>Apple</Product>
