@@ -51,7 +51,6 @@
 				<table width="920px"  border="1" style="border-collapse: collapse"> <!--class="centerText"--> 
 					<tr style= "height: 100px">
 						<td width="40%" alt="SenderInformation" valign="top" align="left">
-							<!--Below part was added for part 4-->
 							<hr/>
 							<xsl:for-each select="Invoice/AccountingSupplierParty/Party">
 								<span  style="font-weight:bold;">
@@ -79,7 +78,6 @@
 								</xsl:for-each>
 							</xsl:for-each>
 							<hr/>
-							<!--Above part was added for part 4-->
 							</td>
 							
 						<td width="20%" alt="MinistryLogo">
@@ -91,7 +89,6 @@
 					</tr>
 					<tr style= "height: 100px"> 
 						<td width= "40%" valign="top" align="left">
-						<!--Below part was added for part 4-->
 							<hr/>
 							<xsl:for-each select="Invoice/AccountingCustomerParty/Party">
 								<span  style="font-weight:bold;">
@@ -120,7 +117,6 @@
 								</xsl:for-each>				
 							</xsl:for-each>
 							<hr/>
-							<!--Above part was added for part 4-->
 						</td>
 						<td width= "20%" style= "text-align:center">
 							</td>
@@ -178,6 +174,8 @@
 								</span>
 							</td>							
 						</tr>
+						<!-- This part was removed in part5-->
+						<!--
 						<xsl:for-each select="Invoice/InvoiceLine">
 							<tr>
 								<td id="lineTableTd" style="width:9%">
@@ -233,6 +231,13 @@
 								</td>
 							</tr>
 						</xsl:for-each>
+						-->
+						
+						<!-- below part added for part 5-->
+						<xsl:for-each select="Invoice/InvoiceLine">
+									<xsl:apply-templates select="."/>
+						</xsl:for-each>
+						<!--above part added for part 5-->
 					</tbody>
 				</table>
 				<table  width= "920px" style= "text-align:center" class="centerText" id="lineTable">
@@ -245,6 +250,62 @@
 			</body>
 		</html>
 	</xsl:template>
+	<!-- below template added for part 5-->
+	<xsl:template match="Invoice/InvoiceLine">
+		<tr>
+								<td id="lineTableTd" style="width:9%">
+									<span align="center">
+										<xsl:value-of select="./ItemNumber"/>
+									</span>
+								</td>
+								<td id="lineTableTd" style="width:9%">
+									<span align="center">
+										<xsl:value-of select="./Product"/>
+									</span>
+								</td>
+								<td id="lineTableTd" style="width:9%">
+									<span align="center">
+										<xsl:value-of select="./Quantity"/> 
+										<xsl:text>&#160;</xsl:text>
+										<xsl:value-of select = "./Quantity/@unitCode"/>
+									</span>
+								</td>
+								<td id="lineTableTd" style="width:9%">
+									<span align="center">
+										<xsl:value-of select="./UnitCost"/>
+										<xsl:text>&#160;</xsl:text>
+										<xsl:value-of select="./UnitCost/@currency"/>
 
+									</span>
+								</td>
+								<td id="lineTableTd" style="width:9%">
+									<span align="center">
+										<xsl:value-of select="./TaxRate"/>
+										<xsl:text>%</xsl:text>
+									</span>
+								</td>
+								<td id="lineTableTd" style="width:9%">
+									<span align="center">
+										<xsl:value-of select="./TaxAmount"/>
+										<xsl:text>&#160;</xsl:text>
+										<xsl:value-of select="./TaxAmount/@currency"/>
+									</span>
+								</td>
+								<td id="lineTableTd" style="width:9%">
+									<span align="center">
+										<xsl:value-of select="./Note"/>
+									</span>
+								</td>
+								<td id="lineTableTd" style="width:5%">
+									<span align="center">
+										<xsl:value-of select="./TotalAmountIncludingTax"/>
+										<xsl:text>&#160;</xsl:text>
+										<xsl:value-of select="./TotalAmountIncludingTax/@currency"/>
+
+									</span>
+								</td>
+							</tr>
+	</xsl:template>
+<!-- above template added for part 5-->
 
 </xsl:stylesheet>
