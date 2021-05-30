@@ -2,7 +2,7 @@
 Visual design of XML informations with the help of XSLT
 
 ### **This commit's aim**:
-*  Reservation of fields to be used in the future commits
+*  To add 2 logos in base64 format
 	
 Note: 
 The output that I obtained after transformation of XML into HTML -> [output.html](output.html)
