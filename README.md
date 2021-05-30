@@ -1,2 +1,9 @@
 # e-invoice-visual
-Visual design of XML information with the help of XSLT
+Visual design of XML informations with the help of XSLT
+
+### **This commit's aim**:
+*  Displaying items of e-invoice
+	
+Note: 
+The output that I obtained after transformation of XML into HTML -> [output.html](output.html)
+

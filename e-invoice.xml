@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+<?xml-stylesheet type="text/xsl" href="results.xsl"?>
+-->
+<Invoice>
+	<InvoiceLine>
+		<ItemNumber>1</ItemNumber>
+		<Product>Apple</Product>
+		<Quantity unitCode="KG">10</Quantity>
+		<UnitCost currency="USD">2</UnitCost>
+		<TaxRate>10</TaxRate>
+		<TaxAmount currency="USD">2</TaxAmount>
+		<Note/>
+		<TotalAmountIncludingTax currency="USD">22</TotalAmountIncludingTax>
+	</InvoiceLine>
+	<InvoiceLine>
+		<ItemNumber>2</ItemNumber>
+		<Product>Orange</Product>
+		<Quantity unitCode="KG">5</Quantity>
+		<UnitCost currency="USD">1.5</UnitCost>
+		<TaxRate>10</TaxRate>
+		<TaxAmount currency="USD">0.75</TaxAmount>	
+		<Note/>
+		<TotalAmountIncludingTax currency="USD">8.25</TotalAmountIncludingTax>
+	</InvoiceLine>
+</Invoice>
